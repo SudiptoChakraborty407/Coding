@@ -20,6 +20,9 @@ int main(){
             case 4:
                 display();
                 break;
+            default:
+                printf("Input incorrect");
+                break;
         }
     }
 }
