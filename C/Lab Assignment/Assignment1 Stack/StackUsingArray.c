@@ -8,6 +8,8 @@ int main(){
     while (n!=0){
         scanf("%d", &n);
         switch (n){
+            case 0:
+                break;
             case 1:
                 push();
                 break;
