@@ -49,13 +49,26 @@ void display(Queue *q){
     }
     
     printf("The Queue is : \n");
-    for(int i=q->front+1;i<=q->rear-1;i++){
+    for(int i=q->front+1;i<q->rear;i++){
         printf("%d ", q->items[i]);
     }
+    printf("\n");
+}
+
+void find(Queue *q){
+    int largest = q->items[q->front+1];
+    int smallest = largest;
+    for(int i=q->front+1;i<=q->rear;i++){
+        if (largest<q->items[i])
+            largest = q->items[i];
+        if (smallest>q->items[i])
+            smallest = q->items[i];
+    }
+    printf("The smallest item in the Queue is %d while the largest item is %d \n", smallest, largest);
 }
 
 int main(){
-    printf ("Press \n 0 -> terminate \n 1 to Enqueue \n 2 to Dequeue \n 3 to Display \n");
+    printf ("Press \n 0 -> terminate \n 1 to Enqueue \n 2 to Dequeue \n 3 to Display \n 4 to show largest and smallest \n");
     int n=-1;
     Queue q;
     init(&q);
@@ -72,6 +85,9 @@ int main(){
                 break;
             case 3:
                 display(&q);
+                break;
+            case 4:
+                find(&q);
                 break;
             default:
                 printf("Input incorrect");
