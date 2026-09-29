@@ -28,7 +28,7 @@ void enqueue(Queue *q){
     }
     
     int value;
-    printf("Enter the value you want to Enqueue: ");
+    printf("Enter the value you want to Enqueue: \n");
     scanf("%d", &value);
     q->items[q->rear++]=value;
 }
@@ -45,7 +45,6 @@ int dequeue(Queue *q){
 void display(Queue *q){
     if(isEmpty(q)){
         printf("Queue is Empty");
-        return -99999999;
     }
     
     printf("The Queue is : \n");

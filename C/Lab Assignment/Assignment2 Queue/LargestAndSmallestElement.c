@@ -49,7 +49,7 @@ void display(Queue *q){
     }
     
     printf("The Queue is : \n");
-    for(int i=q->front+1;i<q->rear;i++){
+    for(int i=q->front+1;i<=q->rear;i++){
         printf("%d ", q->items[i]);
     }
     printf("\n");
@@ -59,7 +59,7 @@ void find(Queue *q){
     int largest = q->items[q->front+1];
     int smallest = largest;
     for(int i=q->front+1;i<=q->rear;i++){
-        if (largest<q->items[i])
+        if (largest < q->items[i])
             largest = q->items[i];
         if (smallest>q->items[i])
             smallest = q->items[i];

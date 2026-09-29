@@ -27,7 +27,7 @@ void push(char n){
 }
 
 int main(){
-    printf("Enter the String to be reversed: ");
+    printf("Enter the String to check for palindrome: ");
     char str[100], nstr[100];
     scanf("%s", str);
     int n = strlen(str);
